@@ -75,7 +75,9 @@ Chart.defaults.color = '#64748b';
 
 // Problem Analysis Chart
 const problemCtx = document.getElementById('problemChart');
+console.log('Problem chart canvas found:', problemCtx);
 if (problemCtx) {
+    console.log('Creating problem chart...');
     new Chart(problemCtx, {
         type: 'doughnut',
         data: {
@@ -122,7 +124,9 @@ if (problemCtx) {
 
 // Challenges Chart
 const challengesCtx = document.getElementById('challengesChart');
+console.log('Challenges chart canvas found:', challengesCtx);
 if (challengesCtx) {
+    console.log('Creating challenges chart...');
     new Chart(challengesCtx, {
         type: 'bar',
         data: {
@@ -427,11 +431,15 @@ window.addEventListener('scroll', throttle(() => {
 
 // Initialize all animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Add fade-in classes to elements
+    // Ensure all sections are visible
     document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'block';
+        section.style.visibility = 'visible';
+        section.style.opacity = '1';
         section.classList.add('fade-in');
     });
     
     // Initialize any additional interactive features
     console.log('SURF 2025 Presentation Website Loaded Successfully!');
+    console.log('Sections found:', document.querySelectorAll('.section').length);
 });

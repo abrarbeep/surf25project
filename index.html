@@ -352,11 +352,23 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 SURF Research Project. All rights reserved.</p>
+                <p>All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Debug script to ensure content is loading
+        window.addEventListener('load', function() {
+            console.log('Page fully loaded');
+            console.log('Sections found:', document.querySelectorAll('section').length);
+            console.log('Abstract section:', document.getElementById('abstract'));
+            console.log('Overview section:', document.getElementById('overview'));
+            console.log('Activities section:', document.getElementById('activities'));
+            console.log('Findings section:', document.getElementById('findings'));
+            console.log('Next steps section:', document.getElementById('next-steps'));
+        });
+    </script>
 </body>
 </html>
